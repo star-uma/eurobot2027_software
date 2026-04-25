@@ -1,13 +1,17 @@
 # Eurobot 2027 - Meta-repositorio de Software
 
-Este repositorio contiene la arquitectura de dependencias para clonar e instalar el ecosistema completo de ROS 2 del robot. 
+Este repositorio contiene el script de instalación automática para el ecosistema completo de ROS 2 del robot.
 
-## Instalación del Entorno de Desarrollo
+## Instalación rápida
 
-Sigue estos pasos para crear el workspace, descargar todos los repositorios y compilar el código. 
+Abre tu terminal y ejecuta estos tres comandos:
 
-### 1. Crear el Workspace
-Crea la carpeta base del proyecto:
 ```bash
-mkdir -p ~/eurobot2027_ws
-cd ~/eurobot2027_ws
+# 1. Clona este repositorio en tu ordenador (puede ser en cualquier carpeta temporal)
+git clone [https://github.com/TnTivanTnT/eurobot2027_software.git](https://github.com/TnTivanTnT/eurobot2027_software.git)
+
+# 2. Entra en la carpeta
+cd eurobot2027_software
+
+# 3. Ejecuta el instalador automático
+./install.sh
