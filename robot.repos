@@ -1,13 +1,13 @@
 repositories:
-  src/eurobot2027_software_vision:
+  eurobot2027_software_vision:
     type: git
     url: https://github.com/TnTivanTnT/eurobot2027_software_vision.git
     version: main
-  src/eurobot2027_software_control:
+  eurobot2027_software_control:
     type: git
     url: https://github.com/TnTivanTnT/eurobot2027_software_control.git
     version: main
-  src/eurobot2027_software_simulacion:
+  eurobot2027_software_simulacion:
     type: git
     url: https://github.com/TnTivanTnT/eurobot2027_software_simulacion.git
     version: main
