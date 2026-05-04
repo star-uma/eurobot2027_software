@@ -1,13 +1,13 @@
 repositories:
   eurobot2027_software_vision:
     type: git
-    url: https://github.com/TnTivanTnT/eurobot2027_software_vision.git
+    url: https://github.com/star-uma/eurobot2027_software_vision.git
     version: main
   eurobot2027_software_control:
     type: git
-    url: https://github.com/TnTivanTnT/eurobot2027_software_control.git
+    url: https://github.com/star-uma/eurobot2027_software_control.git
     version: main
   eurobot2027_software_simulacion:
     type: git
-    url: https://github.com/TnTivanTnT/eurobot2027_software_simulacion.git
+    url: https://github.com/star-uma/eurobot2027_software_simulacion.git
     version: main
