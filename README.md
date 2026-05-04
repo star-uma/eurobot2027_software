@@ -8,7 +8,7 @@ Abre tu terminal y ejecuta estos tres comandos:
 
 ```bash
 # 1. Clona este repositorio en tu ordenador (puede ser en cualquier carpeta temporal)
-git clone [https://github.com/TnTivanTnT/eurobot2027_software.git](https://github.com/TnTivanTnT/eurobot2027_software.git)
+git clone https://github.com/star-uma/eurobot2027_software.git
 
 # 2. Entra en la carpeta
 cd eurobot2027_software
