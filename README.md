@@ -14,4 +14,5 @@ git clone https://github.com/star-uma/eurobot2027_software.git
 cd eurobot2027_software
 
 # 3. Ejecuta el instalador automático
-./install.sh
+vcs import . < robot.repos
+
