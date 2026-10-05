@@ -16,3 +16,8 @@ cd eurobot2027_software
 # 3. Ejecuta el instalador automático
 vcs import . < robot.repos
 
+## Repositorios
+* [eurobot2027_software_vision](https://github.com/star-uma/eurobot2027_software_vision.git) - Paquetes de visión artificial.
+* [eurobot2027_software_control](https://github.com/star-uma/eurobot2027_software_control.git) - Nodos de control y navegación.
+* [eurobot2027_software_simulacion](https://github.com/star-uma/eurobot2027_software_simulacion.git) - Entornos virtuales y modelo URDF en Gazebo.
+* [eurobot2027_software_firmware_esp32](https://github.com/star-uma/eurobot2027_software_firmware_esp32.git) - Código de bajo nivel para microcontroladores.
