@@ -14,7 +14,7 @@ git clone https://github.com/star-uma/eurobot2027_software.git
 cd eurobot2027_software
 
 # 3. Ejecuta el instalador automático
-vcs import . < robot.repos
+./instalador.sh
 ```
 ## Repositorios
 * [eurobot2027_software_vision](https://github.com/star-uma/eurobot2027_software_vision.git) - Paquetes de visión artificial.
