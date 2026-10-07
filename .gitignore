@@ -1,4 +1,5 @@
 .DS_Store
 *.swp
 eurobot2027_software*
+eurobot2027_ws/
 *~
