@@ -11,3 +11,7 @@ repositories:
     type: git
     url: https://github.com/star-uma/eurobot2027_software_simulacion.git
     version: main
+  eurobot2027_software_firmaware_esp32:
+    type: git
+    url: https://github.com/star-uma/eurobot2027_software_firmware_esp32.git
+    version: main
