@@ -2,7 +2,7 @@
 
 Este repositorio contiene el script de instalación automática para el ecosistema completo de ROS 2 del robot.
 
-## Instalación rápida
+## Instalación completa
 
 Abre tu terminal y ejecuta estos tres comandos:
 
@@ -15,6 +15,21 @@ cd eurobot2027_software
 
 # 3. Ejecuta el instalador automático
 ./instalador.sh
+```
+
+## Instalación robot
+
+Abre tu terminal y ejecuta estos tres comandos:
+
+```bash
+# 1. Clona este repositorio en tu ordenador (puede ser en cualquier carpeta temporal)
+git clone https://github.com/star-uma/eurobot2027_software.git
+
+# 2. Entra en la carpeta
+cd eurobot2027_software
+
+# 3. Ejecuta el instalador automático
+./instalador_robot.sh
 ```
 ## Repositorios
 * [eurobot2027_software_vision](https://github.com/star-uma/eurobot2027_software_vision.git) - Paquetes de visión artificial.
