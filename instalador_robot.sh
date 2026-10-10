@@ -2,7 +2,8 @@
 # Instalador automático para Eurobot 2027 (Raspberry Pi 5)
 # Detiene el script si ocurre algún error crítico
 set -e 
-
+# Actualiza el sistema antes de comenzar
+sudo apt update && sudo apt upgrade -y
 echo "Iniciando configuración del Eurobot 2027..."
 
 echo "1/5: Configurando repositorios de ROS 2 Jazzy..."
