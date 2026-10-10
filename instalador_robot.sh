@@ -2,19 +2,22 @@
 # Instalador automático para Eurobot 2027 (Raspberry Pi 5)
 # Detiene el script si ocurre algún error crítico
 set -e 
+
 # Actualiza el sistema antes de comenzar
 sudo apt update && sudo apt upgrade -y
 echo "Iniciando configuración del Eurobot 2027..."
 
-echo "1/5: Configurando repositorios de ROS 2 Jazzy..."
+echo "1/5: Limpiando configuraciones antiguas y añadiendo repositorios de ROS 2 Jazzy..."
+# Elimina rastro de configuraciones manuales para evitar el error "Conflicting values"
+sudo rm -f /etc/apt/sources.list.d/ros2.list /usr/share/keyrings/ros-archive-keyring.gpg
 
-sudo apt update && sudo apt install locales
+sudo apt update && sudo apt install locales -y
 sudo locale-gen en_US en_US.UTF-8
 sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-sudo apt install software-properties-common
-sudo add-apt-repository universe
+sudo apt install software-properties-common -y
+sudo add-apt-repository universe -y
 
 sudo apt update && sudo apt install curl -y
 export ROS_APT_SOURCE_VERSION=$(curl -s https://api.github.com/repos/ros-infrastructure/ros-apt-source/releases/latest | grep -F "tag_name" | awk -F'"' '{print $4}')
@@ -23,7 +26,13 @@ sudo dpkg -i /tmp/ros2-apt-source.deb
 
 echo "2/5: Instalando ROS 2 Base y herramientas de compilación..."
 sudo apt update
-sudo apt upgrade
+
+# --- PARCHE DE DEPENDENCIAS UBUNTU 24.04 ---
+# Fuerza la versión base de estas librerías y las bloquea para que ROS 2 pueda instalarse
+echo "Aplicando parche de dependencias para liblz4-1 y libzstd1..."
+sudo apt install --allow-downgrades liblz4-1=1.9.4-1build1 libzstd1=1.5.5+dfsg2-2build1 -y
+sudo apt-mark hold liblz4-1 libzstd1
+# -------------------------------------------
 
 sudo apt install ros-jazzy-ros-base python3-colcon-common-extensions python3-rosdep -y
 
@@ -38,7 +47,7 @@ git clone https://github.com/star-uma/eurobot2027_software_vision.git
 
 echo "4/5: Resolviendo dependencias de hardware (rosdep)..."
 cd $WS_DIR
-sudo rosdep init || true # El || true evita que falle si ya estaba inicializado
+sudo rosdep init || true
 rosdep update
 rosdep install --from-paths src --ignore-src -r -y
 
@@ -47,7 +56,6 @@ source /opt/ros/jazzy/setup.bash
 colcon build --symlink-install
 
 echo "Configurando entorno automático..."
-# Solo añade el source si no existe ya en el .bashrc
 if ! grep -q "ros/jazzy/setup.bash" ~/.bashrc; then
     echo "source /opt/ros/jazzy/setup.bash" >> ~/.bashrc
     echo "source $WS_DIR/install/setup.bash" >> ~/.bashrc
