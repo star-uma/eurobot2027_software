@@ -4,7 +4,7 @@ Este repositorio contiene el script de instalación automática para el ecosiste
 
 ## Instalación completa
 
-Abre tu terminal y ejecuta estos tres comandos:)
+Abre tu terminal y ejecuta estos tres comandos:
 
 ```bash
 # 1. Clona este repositorio en tu ordenador (puede ser en cualquier carpeta temporal)
