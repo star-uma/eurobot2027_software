@@ -8,7 +8,7 @@ echo "Creando workspace en $WS_DIR..."
 mkdir -p $WS_DIR/src
 
 sudo apt update
-sudo apt install python3-vcstool python3-colcon-common-extensions python -y
+sudo apt install python3-vcstool
 echo "Descargando repositorios..."
 # Importa los repositorios desde el archivo robot.repos a la carpeta src del workspace
 vcs import $WS_DIR/src < robot.repos
