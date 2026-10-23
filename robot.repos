@@ -1,17 +1,17 @@
 repositories:
-  eurobot2027_software_vision:
+  eurobot_software_vision:
     type: git
     url: https://github.com/star-uma/eurobot_software_vision.git
     version: main
-  eurobot2027_software_control:
+  eurobot_software_control:
     type: git
     url: https://github.com/star-uma/eurobot_software_control.git
     version: main
-  eurobot2027_software_simulacion:
+  eurobot_software_simulacion:
     type: git
     url: https://github.com/star-uma/eurobot_software_simulacion.git
     version: main
-  eurobot2027_software_firmaware_esp32:
+  eurobot_software_firmaware_esp32:
     type: git
     url: https://github.com/star-uma/eurobot_software_firmware_esp32.git
     version: main
