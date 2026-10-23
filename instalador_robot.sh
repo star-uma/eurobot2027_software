@@ -1,11 +1,11 @@
 #!/bin/bash
-# Instalador automático para Eurobot 2027 (Raspberry Pi 5)
+# Instalador automático para Eurobot (Raspberry Pi 5)
 # Detiene el script si ocurre algún error crítico
 set -e 
 
 # Actualiza el sistema antes de comenzar
 sudo apt update && sudo apt upgrade -y
-echo "Iniciando configuración del Eurobot 2027..."
+echo "Iniciando configuración del Eurobot ..."
 
 echo "1/5: Limpiando configuraciones antiguas y añadiendo repositorios de ROS 2 Jazzy..."
 # Elimina rastro de configuraciones manuales para evitar el error "Conflicting values"
@@ -42,8 +42,8 @@ WS_DIR="$(pwd)/eurobot2027_ws"
 mkdir -p $WS_DIR/src
 cd $WS_DIR/src
 
-git clone https://github.com/star-uma/eurobot2027_software_control.git
-git clone https://github.com/star-uma/eurobot2027_software_vision.git
+git clone https://github.com/star-uma/eurobot_software_control.git
+git clone https://github.com/star-uma/eurobot_software_vision.git
 
 echo "4/5: Resolviendo dependencias de hardware (rosdep)..."
 cd $WS_DIR
