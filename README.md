@@ -26,7 +26,7 @@ Abre tu terminal y ejecuta estos tres comandos:
 git clone https://github.com/star-uma/eurobot_software.git
 
 # 2. Entra en la carpeta
-cd eurobot2027_software
+cd eurobot_software
 
 # 3. Ejecuta el instalador automático
 ./instalador_robot.sh
