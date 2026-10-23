@@ -2,7 +2,7 @@
 
 # Define la ruta del workspace, dentro del repositorio central
 
-WS_DIR="$(pwd)/eurobot2027_ws"
+WS_DIR="$(pwd)/eurobot_ws"
 
 echo "Creando workspace en $WS_DIR..."
 mkdir -p $WS_DIR/src
